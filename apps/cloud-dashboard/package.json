@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
     "@vercel/postgres": "^0.7.2",
     "clsx": "^2.1.0",
     "lucide-react": "^0.344.0",

@@ -1,3 +1,4 @@
+'use client';
 import { useMemo } from "react";
 
 export default function Seismograph({ history, alert }: { history: any[], alert: any }) {
