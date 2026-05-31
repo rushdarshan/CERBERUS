@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-green: #00FF41;
+  --attention-amber: #FFAA00;
+  --alert-red: #FF003C;
+  --bg-color: #050505;
+}
+
+.btn--active:active {
+  transform: scale(0.96);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--neon-green);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Ambient Scanner Line */
+.scanner-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 2px;
+  background: var(--neon-green);
+  box-shadow: 0 0 12px var(--neon-green);
+  pointer-events: none;
+  z-index: 999;
+  animation: scan 3s linear infinite;
+}
+
+.scanner-line--slow {
+  animation: scan 6s linear infinite;
+}
+
+.scanner-line--stopped {
+  animation: none;
+  opacity: 0.1;
+}
+
+/* --- KEYFRAME ANIMATIONS --- */
+
+@keyframes panel-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes panel-exit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes scan {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.8;
+  }
+  95% {
+    opacity: 0.8;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes threat-countdown {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes pulse-white {
+  0%, 100% {
+    opacity: 0.3;
+    box-shadow: 0 0 10px #FFFFFF;
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 25px #FFFFFF;
+  }
+}
+
+@keyframes threat-flash {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
+@keyframes recovery-surge {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    background-color: var(--neon-green);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(2);
+    background-color: #FFFFFF;
+    box-shadow: 0 0 20px #FFFFFF;
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+    background-color: var(--neon-green);
+  }
+}
