@@ -12,7 +12,7 @@
 [![Database](https://img.shields.io/badge/Database-PostgreSQL-blue?style=flat-square&logo=postgresql)](https://www.postgresql.org/)
 [![Hackathon](https://img.shields.io/badge/Hackathon-Codorra_2026-FFAA00?style=flat-square)](https://codorra.dev)
 
-[Judge Dashboard](https://cerberus-rust.vercel.app/dashboard) • [Demo Video](https://youtu.be/wHvSBGCJAdM)
+[Judge Dashboard](https://cloud-dashboard-umber.vercel.app/) • [Demo Video](https://youtu.be/HHgdTESZ4HM)
 
 </div>
 
